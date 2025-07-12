@@ -1,0 +1,24 @@
+Taylor Brown
+Cloud Engineer
+taylor.b@email.com | (222) 333-4444 | linkedin.com/in/taylorbrown
+
+TECHNICAL SKILLS
+- Cloud Platforms: AWS, Azure, GCP
+- Services: EC2, S3, Lambda, VPC, RDS
+- Networking: DNS, VPN, Load Balancing
+- Security: IAM, KMS, Security Groups
+- Scripting: Python, PowerShell
+
+EXPERIENCE
+Cloud Architect | CloudTech | 2017-Present
+- Designed cloud migration strategy for Fortune 500 company
+- Optimized cloud costs saving $250k annually
+- Implemented disaster recovery solution with 99.99% uptime
+
+CERTIFICATIONS
+- AWS Solutions Architect Professional
+- Microsoft Certified: Azure Administrator
+
+PROJECTS
+- Multi-Cloud Deployment: Hybrid AWS/Azure environment
+- Serverless Application: Event-driven architecture handling 1M+ requests/day

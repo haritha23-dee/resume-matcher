@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🚀 Resume Matcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00ffff;
+            --neon-pink: #ff00ff;
+            --bg-color: radial-gradient(circle at center, #0f001e, #180136, #23004d);
+            --box-blur: blur(12px);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .upload-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.25), 0 0 60px rgba(255, 0, 255, 0.2);
+            border: 2px solid rgba(0, 255, 255, 0.15);
+            text-align: center;
+            width: 90%;
+            max-width: 460px;
+            backdrop-filter: var(--box-blur);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+        }
+
+        .file-input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .file-input {
+            opacity: 0;
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        .file-label {
+            display: block;
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .file-label:hover {
+            background-color: rgba(0, 255, 255, 0.1);
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 15px 34px;
+            font-size: 1.05rem;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            border: none;
+            border-radius: 14px;
+            color: #000;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 0 14px var(--neon-pink);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+        }
+
+        .file-name {
+            margin-top: 8px;
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .error-msg {
+            color: #ff8080;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        .success-msg {
+            color: #90ee90;
+            margin-top: 12px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 480px) {
+            .upload-box {
+                padding: 2rem 1.5rem;
+            }
+
+            .btn {
+                padding: 14px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-box">
+        <h1>🚀 Resume Matcher</h1>
+        <p>Upload your resume (PDF or TXT)</p>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="file-input-container">
+                <label class="file-label" id="fileLabel">Choose file</label>
+                <input type="file" name="resume_file" class="file-input" id="fileInput" accept=".pdf,.txt" required>
+            </div>
+            <p class="file-name" id="fileName">No file chosen</p>
+
+            {% if error %}
+            <p class="error-msg">{{ error }}</p>
+            {% endif %}
+            {% if message %}
+            <p class="success-msg">{{ message }}</p>
+            {% endif %}
+
+            <button class="btn" type="submit">🔍 Upload and Match</button>
+        </form>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileName = document.getElementById('fileName');
+        const fileLabel = document.getElementById('fileLabel');
+
+        fileInput.addEventListener('change', function () {
+            if (fileInput.files.length > 0) {
+                fileName.textContent = fileInput.files[0].name;
+                fileLabel.textContent = "✅ File Selected";
+            } else {
+                fileName.textContent = "No file chosen";
+                fileLabel.textContent = "Choose file";
+            }
+        });
+    </script>
+</body>
+</html>

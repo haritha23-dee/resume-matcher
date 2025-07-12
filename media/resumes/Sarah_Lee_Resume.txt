@@ -1,0 +1,25 @@
+Name: Sarah Lee
+Email: sarah.lee@example.com
+Phone: +1-555-987-6543
+
+Objective:
+Aspiring Data Scientist seeking to apply machine learning and data mining techniques to solve real-world problems.
+
+Education:
+Master of Science in Data Science
+University of Tech, 2023
+
+Skills:
+- Python, R, SQL
+- Machine Learning (scikit-learn, TensorFlow)
+- Data Visualization (Matplotlib, Seaborn)
+- Statistical Analysis
+
+Experience:
+Data Science Intern, DataCorp, Jan 2023 - Apr 2023
+- Developed predictive models for customer churn
+- Conducted data cleaning and feature engineering
+
+Projects:
+- Sentiment Analysis on Social Media Data
+- Fraud Detection using Random Forest

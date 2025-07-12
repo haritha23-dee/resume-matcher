@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🚀 Resume Matcher Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at center, #0f001e, #180136, #23004d);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .result-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 50px rgba(255, 0, 255, 0.3);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            max-width: 750px;
+            width: 90%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: #aaa;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        th {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .score {
+            color: #00FF9F;
+            font-weight: bold;
+        }
+
+        .category {
+            color: #B388EB;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 14px 30px;
+            font-size: 1rem;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            border: none;
+            border-radius: 12px;
+            color: #000;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 0 12px #ff00ff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>🚀 Resume Matcher</h1>
+        <p>Top 5 Matches for '<strong>{{ filename }}</strong>'</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Role</th>
+                    <th>Score</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.Role }}</td>
+                    <td class="score">{{ result.Score }}</td>
+                    <td class="category">{{ result.Category }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+        <a href="{% url 'upload_resume' %}">
+            <button class="btn">Upload Another Resume</button>
+        </a>
+    </div>
+</body>
+</html>

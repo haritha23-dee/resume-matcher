@@ -1,0 +1,25 @@
+Alex Johnson
+Cybersecurity Engineer
+alex.j@email.com | (555) 123-4567 | linkedin.com/in/alexjohnson
+
+TECHNICAL SKILLS
+- Security: SIEM, IDS/IPS, Firewalls, Pen Testing
+- Tools: Wireshark, Metasploit, Burp Suite
+- Frameworks: NIST, ISO 27001
+- Cloud Security: AWS, Azure
+- Scripting: Python, Bash
+
+EXPERIENCE
+Security Analyst | SecureNet | 2018-Present
+- Reduced security incidents by 60% through improved monitoring
+- Conducted penetration tests identifying 50+ vulnerabilities
+- Implemented company-wide security awareness training
+
+CERTIFICATIONS
+- CISSP
+- CEH
+- CompTIA Security+
+
+PROJECTS
+- Automated Threat Detection: Python-based monitoring system
+- Security Audit: Comprehensive review of cloud infrastructure

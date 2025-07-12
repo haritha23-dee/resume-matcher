@@ -1,0 +1,49 @@
+
+Name: Priya Ramesh
+Email: priya.ramesh@example.com
+Phone: +91-9876543210
+
+Objective:
+Passionate developer with a strong foundation in Machine Learning, Artificial Intelligence, and Mobile App Development using Flutter. Seeking a challenging role to leverage my skills in building intelligent applications and scalable systems.
+
+Education:
+Bachelor of Technology in Computer Science
+XYZ Institute of Technology, Chennai | 2018 - 2022
+CGPA: 8.9/10
+
+Technical Skills:
+- Programming Languages: Python, Dart, JavaScript
+- Machine Learning: Scikit-Learn, TensorFlow, Keras, Pandas, NumPy
+- AI Techniques: NLP, Computer Vision, Neural Networks
+- App Development: Flutter, Firebase, REST APIs
+- Tools: Git, Jupyter Notebook, VS Code, Android Studio
+
+Projects:
+1. AI-Powered Chatbot for College Enquiries
+   - Built a hybrid chatbot using NLP, integrated with Dialogflow and Firebase.
+   - Used intent classification and fallback responses for dynamic user interaction.
+
+2. Flutter-Based News App with ML Integration
+   - Developed a mobile news application with Flutter.
+   - Integrated a fake news detection ML model using TensorFlow Lite.
+
+3. Resume Screening System using Machine Learning
+   - Created a resume-job description matching system using TF-IDF and cosine similarity.
+   - Achieved an accuracy of 87% on validation resumes.
+
+Experience:
+Machine Learning Intern | DataVerse Labs | Jan 2022 - May 2022
+- Developed classification models for financial document analysis.
+- Automated feature extraction pipelines using Scikit-learn and Pandas.
+
+Certifications:
+- TensorFlow Developer Certificate – DeepLearning.AI
+- Full Stack Flutter Development – Udemy
+
+Achievements:
+- Winner of Smart India Hackathon 2021
+- Finalist at TCS CodeVita 2022
+
+Languages: English, Tamil, Hindi
+
+Hobbies: Blogging on AI trends, Mobile App Prototyping, Open-source contributions
