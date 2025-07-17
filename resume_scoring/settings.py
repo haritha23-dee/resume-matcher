@@ -29,6 +29,8 @@ DEBUG = os.environ.get('DEBUG', "False") == "True"
 
 ALLOWED_HOSTS = ['AI-resume-scoring.onrender.com']
 
+# Secure settings
+CSRF_TRUSTED_ORIGINS = ['https://AI-resume-scoring.onrender.com']
 
 # Application definition
 
@@ -52,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'resume_scoring.urls'
@@ -84,7 +86,7 @@ if os.environ.get('RENDER'):
     DATABASES = {
         'default': dj_database_url.config(default='sqlite:///db.sqlite3')
     }
-    DATABASES['default']['CONN_MAX_AGE'] = 600
+    DATABASES['default']['conn_max_age'] = 600
 else:
     DATABASES = {
         'default': {
