@@ -1,1 +1,1 @@
-web: gunicorn resume_scoring.wsgi:application
+web: gunicorn resume_scoring.wsgi
