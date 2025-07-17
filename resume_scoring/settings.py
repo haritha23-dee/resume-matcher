@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-x(7mg43(!5%aeri=$(59=2_y)t(93as4ibhzuo(4-d6ridcl9j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', "False") == "True"
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['AI-resume-scoring.onrender.com']
 
 
 # Application definition
