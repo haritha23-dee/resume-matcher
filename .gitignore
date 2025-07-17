@@ -15,3 +15,5 @@ ENV/
 # Ignore OS junk files
 .DS_Store
 Thumbs.db
+
+/staticfiles/

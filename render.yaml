@@ -1,12 +1,9 @@
 services:
   - type: web
-    name: ai-resume-scoring
+    name: resume-scoring-app
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn resume_scoring.wsgi:application
     envVars:
       - key: DEBUG
-        value: False
-      - key: SECRET_KEY
-        generateValue: true
-    staticPublishPath: staticfiles
+        value: "False"
