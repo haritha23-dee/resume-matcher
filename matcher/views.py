@@ -2,7 +2,22 @@ import os
 import re
 import numpy as np
 import pandas as pd
+
 from sentence_transformers import SentenceTransformer
+
+model = None  # define globally but don't load yet
+
+def get_model():
+    global model
+    if model is None:
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+    return model
+
+def predict_view(request):
+    if request.method == "POST":
+        model = get_model()
+        # your code to score resumes
+
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
 import joblib
