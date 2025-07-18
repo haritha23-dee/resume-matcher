@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-x(7mg43(!5%aeri=$(59=2_y)t(93as4ibhzuo(4-d6ridcl9j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', "False") == "True"
 
-ALLOWED_HOSTS = ['resume-scoring.onrender.com']
+ALLOWED_HOSTS = ['resume-scoring-0oo8.onrender.com']
 
 # Secure settings
 CSRF_TRUSTED_ORIGINS = ['https://resume-scoring.onrender.com']
