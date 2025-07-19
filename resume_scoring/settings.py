@@ -30,7 +30,7 @@ DEBUG = os.environ.get('DEBUG', "False") == "True"
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'resume-scorer']
 
 # Secure settings
-CSRF_TRUSTED_ORIGINS = ['https://resume-scoring.onrender.com']
+#CSRF_TRUSTED_ORIGINS = ['https://resume-scoring.onrender.com']
 
 # Application definition
 
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'resume_scoring.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-import dj_database_url
+#import dj_database_url
 
-if os.environ.get('RENDER'):
+"""if os.environ.get('RENDER'):
     DATABASES = {
         'default': dj_database_url.config(default='sqlite:///db.sqlite3')
     }
@@ -94,7 +94,7 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -138,4 +138,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
