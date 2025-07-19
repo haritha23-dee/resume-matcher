@@ -2,22 +2,7 @@ import os
 import re
 import numpy as np
 import pandas as pd
-
 from sentence_transformers import SentenceTransformer
-
-model = None  # define globally but don't load yet
-
-def get_model():
-    global model
-    if model is None:
-        model = SentenceTransformer("all-MiniLM-L6-v2")
-    return model
-
-def predict_view(request):
-    if request.method == "POST":
-        model = get_model()
-        # your code to score resumes
-
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
 import joblib
@@ -47,7 +32,7 @@ df['combined'] = df['Role'].astype(str) + ' ' + df['Description'].astype(str) + 
 df['combined'] = df['combined'].apply(clean_text)
 
 # ✅ Load or compute sentence embeddings
-
+model = SentenceTransformer('all-MiniLM-L6-v2')
 vector_path = os.path.join(settings.BASE_DIR, 'matcher', 'job_vectors.pkl')
 
 if os.path.exists(vector_path):
@@ -148,11 +133,3 @@ def upload_resume(request):
         })
 
     return render(request, 'matcher/upload.html')
-
-"""
-from django.shortcuts import render
-
-def home(request):
-    return render(request,'matcher/home.html')
-
-"""

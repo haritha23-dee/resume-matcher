@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-x(7mg43(!5%aeri=$(59=2_y)t(93as4ibhzuo(4-d6ridcl9j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', "False") == "True"
+DEBUG = "True"
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'resume-scorer']
 
