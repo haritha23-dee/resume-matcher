@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: resume-scoring
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn resume_scoring.wsgi
-    envVars:
-      - key: DEBUG
-        value: "False"

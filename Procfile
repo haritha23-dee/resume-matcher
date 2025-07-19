@@ -1,1 +1,0 @@
-web: gunicorn resume-scoring.wsgi --timeout 120
