@@ -47,7 +47,7 @@ df['combined'] = df['Role'].astype(str) + ' ' + df['Description'].astype(str) + 
 df['combined'] = df['combined'].apply(clean_text)
 
 # ✅ Load or compute sentence embeddings
-model = SentenceTransformer('all-MiniLM-L6-v2')
+
 vector_path = os.path.join(settings.BASE_DIR, 'matcher', 'job_vectors.pkl')
 
 if os.path.exists(vector_path):
