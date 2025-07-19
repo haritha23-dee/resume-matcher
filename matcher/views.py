@@ -132,4 +132,4 @@ def upload_resume(request):
             'filename': uploaded_file.name
         })
 
-    return render(request, 'matcher/upload.html')
+    
