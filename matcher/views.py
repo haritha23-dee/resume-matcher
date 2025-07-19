@@ -149,7 +149,10 @@ def upload_resume(request):
 
     return render(request, 'matcher/upload.html')
 
+"""
 from django.shortcuts import render
 
 def home(request):
     return render(request,'matcher/home.html')
+
+"""

@@ -1,0 +1,23 @@
+Jane Smith
+Data Scientist
+jane.smith@email.com | (987) 654-3210 | github.com/janesmith
+
+TECHNICAL SKILLS
+- Languages: Python, R, SQL
+- ML Libraries: TensorFlow, PyTorch, Scikit-learn
+- Data Tools: Pandas, NumPy, Spark
+- Visualization: Matplotlib, Tableau
+- Cloud: Google Cloud Platform
+
+EXPERIENCE
+Data Scientist | DataCorp | 2019-Present
+- Built predictive models improving sales forecasting accuracy by 35%
+- Developed NLP pipeline processing 1M+ customer reviews monthly
+- Created automated reporting dashboard used by executive team
+
+EDUCATION
+M.S. Data Science | Tech Institute | 2019
+
+PROJECTS
+- Customer Churn Prediction: 92% accuracy model deployed in production
+- Fraud Detection: Reduced false positives by 25% using ensemble methods
