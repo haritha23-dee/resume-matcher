@@ -1,4 +1,4 @@
-# 🚀 AI Resume Matcher using Django, ML & NLP
+# 🚀 Resume Score Matcher using Django, ML & NLP
 An AI-powered Resume Matcher that compares uploaded resumes against a dataset of job descriptions and roles. Built using Django, NLP (Sentence Transformers), and Machine Learning, this web app provides users with similarity scores and categorized job match scores.
 
 ## 🔑 Features
